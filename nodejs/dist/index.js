@@ -603,6 +603,9 @@ ${te}`),X.destroy(z)}function G(z,X){z.headers["accept-version"]!==void 0&&(z.he
             }
         });
 
+        // \u83B7\u53D6\u57FA\u7840\u8DEF\u5F84\uFF08\u79FB\u9664\u5C3E\u90E8\u659C\u6760\uFF09
+        const basePath = location.pathname.replace(//+$/, '');
+
         // \u4FDD\u5B58\u57DF\u540D\u914D\u7F6E
         document.getElementById('siteForm').addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -612,7 +615,7 @@ ${te}`),X.destroy(z)}function G(z,X){z.headers["accept-version"]!==void 0&&(z.he
             const data = { missav: missavSite || null };
 
             try {
-                const res = await fetch(location.pathname + '/site', {
+                const res = await fetch(basePath + '/site', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
@@ -639,7 +642,7 @@ ${te}`),X.destroy(z)}function G(z,X){z.headers["accept-version"]!==void 0&&(z.he
             const data = { missav: missavActors };
 
             try {
-                const res = await fetch(location.pathname + '/actor', {
+                const res = await fetch(basePath + '/actor', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
