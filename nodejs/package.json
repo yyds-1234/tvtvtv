@@ -1,0 +1,34 @@
+{
+    "name": "cat_vod_nodejs_fastify",
+    "version": "1.0.0",
+    "description": "CatVodOpen nodejs config api server demo.",
+    "type": "module",
+    "scripts": {
+        "dev": "cross-env DEV_HTTP_PORT=3006 nodemon --config nodemon.json --inspect src/dev.js",
+        "_build": "rimraf dist && node esbuild.js && node esbuild-config.js",
+        "build": "cross-env NODE_ENV=production npm run _build",
+        "build:dbg": "cross-env NODE_ENV=development npm run _build",
+        "build:config": "cross-env NODE_ENV=production node esbuild-config.js",
+        "zip": "node build-zip.js"
+    },
+    "author": "",
+    "devDependencies": {
+        "@types/node": "20.11.14",
+        "cross-env": "7.0.3",
+        "esbuild": "0.20.1",
+        "esbuild-plugin-external-global": "1.0.1",
+        "javascript-obfuscator": "^5.1.0",
+        "nodemon": "3.0.3",
+        "rimraf": "5.0.5"
+    },
+    "dependencies": {
+        "adm-zip": "^0.5.15",
+        "axios": "1.6.7",
+        "cheerio": "1.0.0-rc.12",
+        "crypto-js": "4.2.0",
+        "fastify": "4.26.0",
+        "node-json-db": "2.3.0",
+        "tough-cookie": "^4.1.3",
+        "undici": "^7.19.0"
+    }
+}

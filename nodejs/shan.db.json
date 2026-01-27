@@ -1,0 +1,21 @@
+{
+    "cookies": {
+        "version": "tough-cookie@4.1.4",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": [
+            {
+                "key": "PHPSESSID",
+                "value": "d4u7jsd6q9r1iormvdlj1b3lp6",
+                "domain": "kanav.ad",
+                "path": "/",
+                "hostOnly": true,
+                "creation": "2026-01-23T10:18:47.920Z",
+                "lastAccessed": "2026-01-23T10:18:47.920Z"
+            }
+        ]
+    }
+}
